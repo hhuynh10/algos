@@ -26,6 +26,19 @@ class SLL {
         removeNode.next = null;
         return this.head;
     }
+
+    display(){
+        var listStr = ""
+        if(this.head == null){
+            return ""
+        }
+        listStr += this.head.value;
+        while(runner != null){
+            listStr += ", " + runner.value
+            runner = runner.next
+        }
+        return listStr
+    }
 }
 
 var mySLL = new SLL();

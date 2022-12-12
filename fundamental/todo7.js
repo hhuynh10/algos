@@ -15,4 +15,4 @@ function sweatshirtPricing(num) {
     }
     console.log('Your total is: ' + total)
 }
-sweatshirtPricing(1)
+sweatshirtPricing(3)

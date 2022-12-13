@@ -4,7 +4,7 @@ function rollOne(){
     console.log("Random number is: " + randomNum)
     return randomNum
 }
-// rollOne()
+rollOne()
 
 function playFives(num){
     for (let i = 1; i <= num; i ++){
@@ -14,19 +14,4 @@ function playFives(num){
         }
     }
 }
-// playFives(5)
-
-function playStatistics() {
-    for (let i = 1; i <= 8; i ++){
-        let randomNum = rollOne()
-        for (let j = 0; j < randomNum; j ++){
-            if (randomNum < j){
-                console.log("Highest value: " + j)
-            }
-            if(randomNum > j){
-                console.log("Lowest value: " + j)
-            }
-        }
-    }
-}
-playStatistics()
+playFives(5)

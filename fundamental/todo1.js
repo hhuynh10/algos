@@ -70,3 +70,15 @@ for (let i = -300000; i <= 300000; i++){
         return sum
     }
 }
+
+// 9
+function insertAt(arr,index,val){
+    arr.push(val);
+    for (let i = arr.length -1; i > index; i-- ){
+        let temp = arr[i]
+        arr[i] = arr[i -1]
+        arr[i-1] = temp
+    }
+    console.log(arr)
+}
+insertAt([100,200,5], 2, 311)

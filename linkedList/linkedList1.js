@@ -63,7 +63,7 @@ class LinkedList {
 }
 
 LL1 = new LinkedList()
-LL1.addFront(10).addFront(23)
+LL1.addFront(10).addFront(23).addFront(50).addFront(18).addFront(2)
 console.log(LL1)
 console.log(LL1.length())
 console.log(LL1.display())

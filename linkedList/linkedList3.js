@@ -20,42 +20,38 @@ class LinkedList {
         return this;
     }
 
-    max() {
+    back(){
         let runner = this.head;
         while (runner !== null){
-            if (runner.data > runner.next.data){
-                return "Max: " + runner.data
+            if (runner.data.next == null){
+                return "Last value: " + runner.data
             }
             runner = runner.next;
         }
     }
 
-    min() {
+    removeBack(){
         let runner = this.head;
-        while (runner !== null){
-            if (runner.data < runner.next.data){
-                return "Min: " + runner.data
-            }
+        while (runner.next.next){
             runner = runner.next;
         }
+        runner.next = null
+        return this
     }
 
-    average() {
-        let length = 0;
-        let sum = 0;
+    addBack(val){
         let runner = this.head;
-        while (runner !== null){
-            length++;
-            sum += runner.data;
-            runner = runner.next;
+        while (runner.next){
+            runner = runner.next
         }
-        let avg = sum / length;
-        return "Average: " + avg
+        runner.next = new Node(val);
+        return this
     }
 }
 
 LL1 = new LinkedList()
-LL1.addFront(12).addFront(15).addFront(20).addFront(9).addFront(1)
-console.log(LL1.max())
-console.log(LL1.min())
-console.log(LL1.average())
+LL1.addFront(18).addFront(11).addFront(3).addFront(7).addFront(21).addBack(17)
+
+console.log(LL1)
+
+console.log(LL1.back())

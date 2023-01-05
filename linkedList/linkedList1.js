@@ -68,3 +68,5 @@ console.log(LL1)
 console.log(LL1.length())
 console.log(LL1.display())
 
+
+console.log(LL1.back())

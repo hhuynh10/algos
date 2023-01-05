@@ -12,5 +12,3 @@ function getFirstLetter(name){
     console.log(newName1 + " to the " + newName2 + "!")
 }
 getFirstLetter('milan')
-
-// 2

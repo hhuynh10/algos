@@ -16,6 +16,8 @@ b.next = c;
 c.next = d;
 d.next = f;
 
+
+// Linked list
 const addArr = (head) => {
     let current = head;
     let arr = []
@@ -27,3 +29,22 @@ const addArr = (head) => {
 }
 
 console.log(addArr(a))
+
+
+// Recursion
+const rAddArr = (head) => {
+    let arr = [];
+    fillArr(head, arr)
+    return arr
+}
+
+const fillArr = (head, arr) => {
+    let current = head
+    if (head === null){
+        return;
+    }
+    arr.push(current.data);
+    fillArr(current.next, arr)
+}
+
+console.log(rAddArr(a))

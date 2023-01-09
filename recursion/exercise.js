@@ -105,3 +105,18 @@ console.log(binarySearch([1, 3, 5, 6], 4));
 console.log(binarySearch([4, 5, 6, 8, 12], 5));
 
 // 9.
+function sortArray(arr) {
+    arr.sort((a, b) => a - b)
+    return arr
+}
+
+console.log(sortArray([6, 2, 11, 8, 1]))
+
+function findValue(arr, val){
+    if (arr.find(value => value == val)){
+        return true
+    }
+    return false
+}
+
+console.log(findValue([6, 2, 11, 8, 1], 2))

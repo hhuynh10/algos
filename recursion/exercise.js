@@ -37,7 +37,7 @@ console.log(range(1,10));
 // 4. Write a JavaScript program to compute the sum of an array of integers.
 function sumArr(arr) {
     if (arr.length === 1){
-        return 0;
+        return arr[0];
     }
     return arr.pop() + sumArr(arr)
 }

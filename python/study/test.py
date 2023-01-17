@@ -43,3 +43,8 @@ for val in "string":
         continue
     print(val)
 
+def sum(a, b):
+    return a + b
+
+print(sum(1, 3))
+

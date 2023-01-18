@@ -4,9 +4,9 @@ def multiplication(num1, num2):
     if product <= 1000:
         product = num1 + num2
     print(product)
-    return product
 
 multiplication(20, 30)
+multiplication(200, 30)
 
 # 2 Print the sum of the current number and the previous number
 for i in range(1, 11):
@@ -121,8 +121,19 @@ def exponent(base, exp):
     for i in range(0, exp):
         total = total * base
     print(total)
-    return total
 
 exponent(2, 5)
 
+# 15. Write a function that calculates the number of occurences of words in the above string and prints it in "container" above.
+testString = "Cats conserve energy by sleeping more than most animals, especially as they grow older. The daily duration of sleep varies, usually between 12 and 16 hours, with 13 and 14 being the average. Some cats can sleep as much as 20 hours. The term 'cat nap' for a short rest refers to the cat's tendency to fall asleep (lightly) for a brief period. While asleep, cats experience short periods of rapid eye movement sleep often accompanied by muscle twitches, which suggests they are dreaming. Outdoor cats are active both day and night, although they tend to be slightly more active at night. To aid with navigation and sensation, cats have dozens of movable whiskers (vibrissae) over their body, especially their faces. These provide information on the width of gaps and on the location of objects in the dark, both by touching objects directly and by sensing air currents; they also trigger protective blink reflexes to protect the eyes from damage."
 
+def wordOccurence(str):
+    newStr = str.lower().split()
+    for i in range(0, len(newStr)):
+        count = 0
+        for j in range(0, len(newStr)):
+            if newStr[i] == newStr[j]:
+                count = count + 1
+        print(f"{newStr[i]}: {count}")
+
+wordOccurence(testString)

@@ -1,6 +1,6 @@
 // 1. Write a JavaScript program to calculate the factorial of a number.
 function factorial(num, total = 1){
-    if (num <= 0){
+    if (num <= 1){
         return total;
     }
     return factorial(num - 1, total * num)

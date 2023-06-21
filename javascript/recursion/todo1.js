@@ -21,12 +21,12 @@ console.log(fSigma(5))
 
 // Recursive Factorial
 function rFact(num, total = 1) {
-    if (num <= 0){
+    if (num <= 1){
         return total;
     }
     return rFact(Math.trunc(num) - 1, total * Math.trunc(num));
 }
 
-console.log(rFact(-1))
+console.log(rFact(5))
 
 // Flood Fill

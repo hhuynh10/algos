@@ -120,3 +120,40 @@ function findValue(arr, val){
 }
 
 console.log(findValue([6, 2, 11, 8, 1], 2))
+
+// 10. Write a recursive function, sum(arr, n), that returns the sum of the first n elements of an array arr.
+function sum(arr, n) {
+    if (n <= 0){
+      return 0
+    }
+    return sum(arr, n-1) + arr[n-1]
+  }
+
+console.log(sum([2, 3, 4, 5], 3))
+
+
+//  11. Count down 
+function countdown(n) {
+    if (n < 1) {
+      return [];
+    } else {
+      const countArray = countdown(n - 1);
+      countArray.unshift(n);
+      return countArray;
+    }
+  }
+  console.log(countdown(5));
+
+
+// 12
+function rangeOfNumbers(startNum, endNum) {
+    if (startNum > endNum){
+      return []
+    } else {
+        const arr = rangeOfNumbers(startNum, endNum-1);
+        arr.push(endNum);
+        return arr;
+      }
+  };
+
+  console.log(rangeOfNumbers(1, 5))

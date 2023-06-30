@@ -1,11 +1,8 @@
-function rangeOfNumbers(startNum, endNum) {
-    if (startNum > endNum){
-      return []
-    } else {
-        const arr = rangeOfNumbers(startNum, endNum-1);
-        arr.push(endNum);
-        return arr;
-      }
-  };
+let soccerWord = "gooooooooal!";
+let gPhrase = "gut feeling";
+let oPhrase = "over the moon";
+let goRegex = /go*/;
+let s = soccerWord.match(goRegex);
+console.log(s)
 
-  console.log(rangeOfNumbers(1, 5))
+
